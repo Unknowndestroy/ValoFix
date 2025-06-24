@@ -1,3 +1,5 @@
+# Licensed under Unknown Destroyer Limited Personal Use License (UDLPL-v1.0)
+
 # Self-elevate to administrator
 if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
